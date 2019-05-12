@@ -1,0 +1,2579 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0213.2333                               -->
+<workbook original-version='18.1' source-build='2019.1.0 (20191.19.0213.2333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='airasia (Multiple Connections)' inline='true' name='federated.0btpllb09t36xk1393itk1c200is' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='192.168.0.31' name='genericodbc.0u4f2ou1srfvk30zne49f18cwes2'>
+            <connection class='genericodbc' dbname='' odbc-connect-string-extras='APPLYSSPWITHQUERIES=1;ASYNCEXECPOLLINTERVAL=100;AUTHMECH=2;AUTORECONNECT=;BINARYCOLUMNLENGTH=;DECIMALCOLUMNSCALE=;DEFAULTSTRINGCOLUMNLENGTH=;DELEGATIONUID=;DESCRIPTION=simba hive;DRIVERCONFIGTAKEPRECEDENCE=;ENABLEASYNCEXEC=;ENABLEUNIQUECOLUMNNAME=;FASTSQLPREPARE=;GETTABLESWITHQUERY=0;HIVESERVERTYPE=2;HOST=192.168.0.31;INVALIDSESSIONAUTORECOVER=1;LCASESSPKEYNAME=;ROWSFETCHEDPERBLOCK=;SERVICEDISCOVERYMODE=0;SHOWSYSTEMTABLE=;SOCKETTIMEOUT=;SSL=0;USENATIVEQUERY=;USEONLYSSPI=;USEUNICODESQLCHARACTERTYPES=' odbc-dbms-name='Hive' odbc-driver='Simba Hive ODBC Driver' odbc-dsn='' odbc-suppress-connection-pooling='' odbc-use-connection-pooling='' port='10000' server='192.168.0.31' username='yongks' />
+          </named-connection>
+          <named-connection caption='Simba Hive ODBC Driver (ODBC)' name='genericodbc.12xu9o701guc0r17nhvvu1d4lvt5'>
+            <connection class='genericodbc' dbname='HIVE' odbc-connect-string-extras='APPLYSSPWITHQUERIES=1;ASYNCEXECPOLLINTERVAL=100;AUTHMECH=2;AUTORECONNECT=;BINARYCOLUMNLENGTH=;DECIMALCOLUMNSCALE=;DEFAULTSTRINGCOLUMNLENGTH=;DELEGATIONUID=;DESCRIPTION=simba hive;DRIVERCONFIGTAKEPRECEDENCE=;ENABLEASYNCEXEC=;ENABLEUNIQUECOLUMNNAME=;FASTSQLPREPARE=;GETTABLESWITHQUERY=0;HIVESERVERTYPE=2;HOST=192.168.0.31;INVALIDSESSIONAUTORECOVER=1;LCASESSPKEYNAME=;ROWSFETCHEDPERBLOCK=;SERVICEDISCOVERYMODE=0;SHOWSYSTEMTABLE=;SOCKETTIMEOUT=;SSL=0;USENATIVEQUERY=;USEONLYSSPI=;USEUNICODESQLCHARACTERTYPES=' odbc-dbms-name='Hive' odbc-driver='Simba Hive ODBC Driver' odbc-dsn='' odbc-suppress-connection-pooling='' odbc-use-connection-pooling='' port='10000' server='' username='yongks' />
+          </named-connection>
+        </named-connections>
+        <relation connection='genericodbc.12xu9o701guc0r17nhvvu1d4lvt5' name='airasia' table='[stocks].[airasia]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>dt</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[dt]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dt</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quote</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[quote]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>quote</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marketcap</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[marketcap]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>marketcap</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>lastprice</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pe</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[pe]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>pe</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dy</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dy]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dy</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>roe</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[roe]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>roe</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>open</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[open]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>open</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[low]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>low</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[high]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>high</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chg</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[chg]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>chg</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>chgpct</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>volume</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>volume</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bidprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[bidprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>bidprice</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bidvolume</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[bidvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>bidvolume</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>askprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[askprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>askprice</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>askvolume</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[askvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>askvolume</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>myrcny_perunit</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[myrcny_perunit]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>myrcny_perunit</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>myrsgd_perunit</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[myrsgd_perunit]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>myrsgd_perunit</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>myrusd_perunit</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[myrusd_perunit]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>myrusd_perunit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_lastprice</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_lastprice</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_change</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_change</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_chgpct</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_chgpct</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_chgvolume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_chgvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_chgvolume</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_chgvolume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_chgvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_chgvolume</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_lastprice</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_lastprice</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_lastprice</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_change</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_change</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_change</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_chgpct</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_chgpct</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_chgpct</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_volume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_volume</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_volume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_volume</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_volume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_volume</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>polarity</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[polarity]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>polarity</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spread</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[spread]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>spread</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sma3</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[sma3]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>sma3</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_friday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_friday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_friday</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65534</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_monday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_monday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_monday</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65534</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_thursday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_thursday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_thursday</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65534</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_tuesday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_tuesday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_tuesday</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65534</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_wednesday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_wednesday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_wednesday</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65534</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>up</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[up]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>up</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BIT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Askprice' datatype='real' name='[askprice]' role='measure' type='quantitative' />
+      <column caption='Askvolume' datatype='integer' name='[askvolume]' role='measure' type='quantitative' />
+      <column caption='Bidprice' datatype='real' name='[bidprice]' role='measure' type='quantitative' />
+      <column caption='Bidvolume' datatype='integer' name='[bidvolume]' role='measure' type='quantitative' />
+      <column caption='Chg' datatype='real' name='[chg]' role='measure' type='quantitative' />
+      <column caption='Chgpct' datatype='real' name='[chgpct]' role='measure' type='quantitative' />
+      <column caption='Clf Change' datatype='real' name='[clf_change]' role='measure' type='quantitative' />
+      <column caption='Clf Chgpct' datatype='real' name='[clf_chgpct]' role='measure' type='quantitative' />
+      <column caption='Clf Lastprice' datatype='real' name='[clf_lastprice]' role='measure' type='quantitative' />
+      <column caption='Clf Volume' datatype='real' name='[clf_volume]' role='measure' type='quantitative' />
+      <column caption='Dji Change' datatype='real' name='[dji_change]' role='measure' type='quantitative' />
+      <column caption='Dji Chgpct' datatype='real' name='[dji_chgpct]' role='measure' type='quantitative' />
+      <column caption='Dji Chgvolume' datatype='real' name='[dji_chgvolume]' role='measure' type='quantitative' />
+      <column caption='Dji Lastprice' datatype='real' name='[dji_lastprice]' role='measure' type='quantitative' />
+      <column caption='Dt' datatype='date' name='[dt]' role='dimension' type='ordinal' />
+      <column caption='Dy' datatype='real' name='[dy]' role='measure' type='quantitative' />
+      <column caption='Gcf Change' datatype='real' name='[gcf_change]' role='measure' type='quantitative' />
+      <column caption='Gcf Chgpct' datatype='real' name='[gcf_chgpct]' role='measure' type='quantitative' />
+      <column caption='Gcf Lastprice' datatype='real' name='[gcf_lastprice]' role='measure' type='quantitative' />
+      <column caption='Gcf Volume' datatype='real' name='[gcf_volume]' role='measure' type='quantitative' />
+      <column caption='High' datatype='real' name='[high]' role='measure' type='quantitative' />
+      <column caption='Ixic Change' datatype='real' name='[ixic_change]' role='measure' type='quantitative' />
+      <column caption='Ixic Chgpct' datatype='real' name='[ixic_chgpct]' role='measure' type='quantitative' />
+      <column caption='Ixic Chgvolume' datatype='real' name='[ixic_chgvolume]' role='measure' type='quantitative' />
+      <column caption='Ixic Lastprice' datatype='real' name='[ixic_lastprice]' role='measure' type='quantitative' />
+      <column caption='Lastprice' datatype='real' name='[lastprice]' role='measure' type='quantitative' />
+      <column caption='Low' datatype='real' name='[low]' role='measure' type='quantitative' />
+      <column caption='Marketcap' datatype='integer' name='[marketcap]' role='measure' type='quantitative' />
+      <column caption='Myrcny Perunit' datatype='real' name='[myrcny_perunit]' role='measure' type='quantitative' />
+      <column caption='Myrsgd Perunit' datatype='real' name='[myrsgd_perunit]' role='measure' type='quantitative' />
+      <column caption='Myrusd Perunit' datatype='real' name='[myrusd_perunit]' role='measure' type='quantitative' />
+      <column caption='Open' datatype='real' name='[open]' role='measure' type='quantitative' />
+      <column caption='Pe' datatype='real' name='[pe]' role='measure' type='quantitative' />
+      <column caption='Polarity' datatype='real' name='[polarity]' role='measure' type='quantitative' />
+      <column caption='Quote' datatype='string' name='[quote]' role='dimension' type='nominal' />
+      <column caption='Roe' datatype='real' name='[roe]' role='measure' type='quantitative' />
+      <column caption='Sma3' datatype='real' name='[sma3]' role='measure' type='quantitative' />
+      <column caption='Spread' datatype='real' name='[spread]' role='measure' type='quantitative' />
+      <column caption='Up' datatype='boolean' name='[up]' role='dimension' type='nominal' />
+      <column caption='Volume' datatype='integer' name='[volume]' role='measure' type='quantitative' />
+      <column caption='Wd Friday' datatype='string' name='[wd_friday]' role='dimension' type='nominal' />
+      <column caption='Wd Monday' datatype='string' name='[wd_monday]' role='dimension' type='nominal' />
+      <column caption='Wd Thursday' datatype='string' name='[wd_thursday]' role='dimension' type='nominal' />
+      <column caption='Wd Tuesday' datatype='string' name='[wd_tuesday]' role='dimension' type='nominal' />
+      <column caption='Wd Wednesday' datatype='string' name='[wd_wednesday]' role='dimension' type='nominal' />
+      <column caption='Zgf Change' datatype='real' name='[zgf_change]' role='measure' type='quantitative' />
+      <column caption='Zgf Chgpct' datatype='real' name='[zgf_chgpct]' role='measure' type='quantitative' />
+      <column caption='Zgf Lastprice' datatype='real' name='[zgf_lastprice]' role='measure' type='quantitative' />
+      <column caption='Zgf Volume' datatype='real' name='[zgf_volume]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.320513' measure-ordering='alphabetic' measure-percentage='0.679487' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='result_37' inline='true' name='federated.04lqgua02ofals175x76g10cfsdm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='result_37' name='textscan.0w6uc4p1qa4ll01fd0fio0eayk2j'>
+            <connection class='textscan' directory='D:/OneDrive - 365.um.edu.my/Master Data Science/WQD 7005 - Data Mining/Assignment/github-stocks118/data' filename='result_37.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0w6uc4p1qa4ll01fd0fio0eayk2j' name='result_37.csv' table='[result_37#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='dt' ordinal='0' />
+            <column datatype='boolean' name='test_y' ordinal='1' />
+            <column datatype='boolean' name='y_pred' ordinal='2' />
+            <column datatype='string' name='result' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[result_37.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dt</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[dt]</local-name>
+            <parent-name>[result_37.csv]</parent-name>
+            <remote-alias>dt</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>test_y</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[test_y]</local-name>
+            <parent-name>[result_37.csv]</parent-name>
+            <remote-alias>test_y</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y_pred</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[y_pred]</local-name>
+            <parent-name>[result_37.csv]</parent-name>
+            <remote-alias>y_pred</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[result]</local-name>
+            <parent-name>[result_37.csv]</parent-name>
+            <remote-alias>result</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Dt' datatype='date' name='[dt]' role='dimension' type='ordinal' />
+      <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+      <column caption='Test Y' datatype='boolean' name='[test_y]' role='dimension' type='nominal' />
+      <column caption='Y Pred' datatype='boolean' name='[y_pred]' role='dimension' type='nominal' />
+      <column-instance column='[result]' derivation='None' name='[none:result:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.557692' measure-ordering='alphabetic' measure-percentage='0.442308' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:result:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;TP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;FN&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TN&quot;</bucket>
+            </map>
+            <map to='#e03531'>
+              <bucket>&quot;FP&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='airasia (stocks.airasia) (stocks)' inline='true' name='federated.0cfv01511tmxue110xj5t1bk7num' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='192.168.0.31' name='hortonworkshadoophive.0vo9ef21pb8sai1c7x8xn1md5fkt'>
+            <connection authentication='yes' authentication-type='2' class='hortonworkshadoophive' connection-type='2' dbname='' odbc-connect-string-extras='' one-time-sql='' port='10000' schema='stocks' server='192.168.0.31' sslcert='' sslmode='' transport-type='1' username='yongks'>
+              <connection-customization class='hortonworkshadoophive' enabled='false' version='18.1'>
+                <vendor name='hortonworkshadoophive' />
+                <driver name='hortonworkshadoophive' />
+                <customizations>
+                  <customization name='CAP_AUTH_DB_IMPERSONATE' value='yes' />
+                  <customization name='CAP_AUTH_KERBEROS_IMPERSONATE' value='yes' />
+                  <customization name='CAP_CONNECT_STORED_PROCEDURE' value='no' />
+                  <customization name='CAP_CREATE_TEMP_TABLES' value='no' />
+                  <customization name='CAP_DATASERVER_MAGIC_NUMBER' value='no' />
+                  <customization name='CAP_DEFERS_CONNECTION_VERIFICATION' value='no' />
+                  <customization name='CAP_DISABLE_EXTRACT_TABLE_INDEXING' value='no' />
+                  <customization name='CAP_EQUIJOINS_ONLY' value='no' />
+                  <customization name='CAP_FAST_METADATA' value='no' />
+                  <customization name='CAP_GREENPLUM_TRUST_METADATA_CONTAINSNULL' value='no' />
+                  <customization name='CAP_HIVE_FIX_METADATA_NAMES' value='yes' />
+                  <customization name='CAP_INDEX_TEMP_TABLES' value='no' />
+                  <customization name='CAP_INSERT_TEMP_EXEC_STORED_PROCEDURE' value='no' />
+                  <customization name='CAP_LOCAL_ALIASES_CASE_INSENSITIVE' value='no' />
+                  <customization name='CAP_ODBC_ALWAYS_THROW_CONNECT_ERRORS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_DATETIME_AS_CHAR' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_DATE_AS_CHAR' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_MAX_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_MEDIUM_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_SIGNED' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_SMALL_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_INT64' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_PREFERRED_TYPES' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_WIDE_CHAR' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_DYNAMIC' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_FORWARD_ONLY' value='yes' />
+                  <customization name='CAP_ODBC_CURSOR_KEYSET_DRIVEN' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_STATIC' value='no' />
+                  <customization name='CAP_ODBC_DRIVER_HIVE_ASSUME_LATEST' value='no' />
+                  <customization name='CAP_ODBC_ERROR_IGNORE_FALSE_ALARM' value='no' />
+                  <customization name='CAP_ODBC_FETCH_BUFFERS_RESIZABLE' value='no' />
+                  <customization name='CAP_ODBC_FETCH_BUFFERS_SIZE_MASSIVE' value='no' />
+                  <customization name='CAP_ODBC_FETCH_CONTINUE_ON_ERROR' value='no' />
+                  <customization name='CAP_ODBC_FORCE_SINGLE_ROW_BINDING' value='no' />
+                  <customization name='CAP_ODBC_METADATA_STRING_LENGTH_UNKNOWN' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLCOLUMNS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLFOREIGNKEYS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLPRIMARYKEYS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLSTATISTICS_API' value='yes' />
+                  <customization name='CAP_ODBC_REBIND_SKIP_UNBIND' value='no' />
+                  <customization name='CAP_ODBC_TRIM_VARCHAR_PADDING' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_AUTO' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_BATCH' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_EACH' value='yes' />
+                  <customization name='CAP_ODBC_USE_NATIVE_PROTOCOL' value='yes' />
+                  <customization name='CAP_PADDED_SEMANTICS_NCHAR_NVARCHAR' value='no' />
+                  <customization name='CAP_QUERY_ALLOW_JOIN_REORDER' value='yes' />
+                  <customization name='CAP_QUERY_ALLOW_PARTIAL_AGGREGATION' value='yes' />
+                  <customization name='CAP_QUERY_ALWAYS_USE_AQ_CACHE' value='no' />
+                  <customization name='CAP_QUERY_AVOID_EXPRESSION_INLINING' value='no' />
+                  <customization name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES' value='no' />
+                  <customization name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES' value='yes' />
+                  <customization name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES' value='yes' />
+                  <customization name='CAP_QUERY_BOOLEXPR_TO_INTEXPR' value='no' />
+                  <customization name='CAP_QUERY_BOOL_IDENTIFIER_TO_LOGICAL' value='no' />
+                  <customization name='CAP_QUERY_EMPTY_DOMAIN_TOP' value='no' />
+                  <customization name='CAP_QUERY_FORCE_AGGREGATE_MEASURES' value='no' />
+                  <customization name='CAP_QUERY_GROUP_BY_ALIAS' value='no' />
+                  <customization name='CAP_QUERY_GROUP_BY_DEGREE' value='no' />
+                  <customization name='CAP_QUERY_HAVING_REQUIRES_GROUP_BY' value='yes' />
+                  <customization name='CAP_QUERY_HAVING_UNSUPPORTED' value='no' />
+                  <customization name='CAP_QUERY_JOIN_ACROSS_SCHEMAS' value='yes' />
+                  <customization name='CAP_QUERY_JOIN_ASSUME_CONSTRAINED' value='no' />
+                  <customization name='CAP_QUERY_JOIN_PUSH_DOWN_CONDITION_EXPRESSIONS' value='no' />
+                  <customization name='CAP_QUERY_JOIN_REQUIRES_SCOPE' value='no' />
+                  <customization name='CAP_QUERY_JOIN_REQUIRES_SUBQUERY' value='no' />
+                  <customization name='CAP_QUERY_NULL_REQUIRES_CAST' value='yes' />
+                  <customization name='CAP_QUERY_RECOMPILE_FAILED_QUERY' value='no' />
+                  <customization name='CAP_QUERY_SELECT_ALIASES_SORTED' value='no' />
+                  <customization name='CAP_QUERY_SORT_BY' value='yes' />
+                  <customization name='CAP_QUERY_SORT_BY_DEGREE' value='no' />
+                  <customization name='CAP_QUERY_SUBQUERIES' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERIES_WITH_TOP' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT' value='yes' />
+                  <customization name='CAP_QUERY_SUPPORTS_LODJOINS' value='yes' />
+                  <customization name='CAP_QUERY_SUPPORT_EMPTY_GROUPBY' value='no' />
+                  <customization name='CAP_QUERY_SUPPRESS_CHECK_DOMAIN_LITERALS_THRESHOLD' value='no' />
+                  <customization name='CAP_QUERY_SUPPRESS_NULL_CHECK_QUERIES' value='no' />
+                  <customization name='CAP_QUERY_TIME_REQUIRES_CAST' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_LIMIT' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_ROWNUM' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_TOP' value='no' />
+                  <customization name='CAP_QUERY_TOP_0_METADATA' value='yes' />
+                  <customization name='CAP_QUERY_TOP_N' value='yes' />
+                  <customization name='CAP_QUERY_USE_DOMAIN_RANGES_OPTIMIZATION' value='yes' />
+                  <customization name='CAP_QUERY_USE_QUERY_FUSION' value='yes' />
+                  <customization name='CAP_QUERY_WHERE_FALSE_METADATA' value='no' />
+                  <customization name='CAP_RELDATEFILT_CASTTODATE' value='no' />
+                  <customization name='CAP_SELECT_INTO' value='no' />
+                  <customization name='CAP_SELECT_TOP_INTO' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_PREFER_TEMP_TABLE' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_REPAIR_TEMP_TABLE_STRINGS' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_TEMP_TABLE_FROM_BUFFER' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_TEMP_TABLE_FROM_NEW_PROTOCOL' value='no' />
+                  <customization name='CAP_SUPPRESS_CONNECTION_POOLING' value='yes' />
+                  <customization name='CAP_SUPPRESS_DISCOVERY_QUERIES' value='no' />
+                  <customization name='CAP_SUPPRESS_GET_SERVER_TIME' value='no' />
+                  <customization name='CAP_SUPPRESS_QUICK_FILTER_ACCELERATION_VIEWS' value='no' />
+                </customizations>
+              </connection-customization>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <relation connection='hortonworkshadoophive.0vo9ef21pb8sai1c7x8xn1md5fkt' name='airasia' table='[stocks].[airasia]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>dt</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[dt]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dt</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quote</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[quote]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>quote</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marketcap</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[marketcap]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>marketcap</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>lastprice</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pe</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[pe]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>pe</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dy</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dy]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dy</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>roe</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[roe]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>roe</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>open</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[open]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>open</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[low]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>low</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[high]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>high</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chg</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[chg]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>chg</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>chgpct</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>volume</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>volume</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bidprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[bidprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>bidprice</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bidvolume</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[bidvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>bidvolume</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>askprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[askprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>askprice</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>askvolume</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[askvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>askvolume</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>myrcny_perunit</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[myrcny_perunit]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>myrcny_perunit</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>myrsgd_perunit</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[myrsgd_perunit]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>myrsgd_perunit</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>myrusd_perunit</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[myrusd_perunit]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>myrusd_perunit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_lastprice</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_lastprice</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_change</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_change</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_chgpct</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_chgpct</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dji_chgvolume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[dji_chgvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>dji_chgvolume</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ixic_chgvolume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[ixic_chgvolume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>ixic_chgvolume</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_lastprice</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_lastprice</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_lastprice</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_lastprice]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_lastprice</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_change</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_change</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_change</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_change]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_change</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_chgpct</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_chgpct</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_chgpct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_chgpct]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_chgpct</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clf_volume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[clf_volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>clf_volume</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gcf_volume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[gcf_volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>gcf_volume</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zgf_volume</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[zgf_volume]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>zgf_volume</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>polarity</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[polarity]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>polarity</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spread</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[spread]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>spread</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sma3</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[sma3]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>sma3</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_friday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_friday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_friday</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_monday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_monday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_monday</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_thursday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_thursday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_thursday</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_tuesday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_tuesday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_tuesday</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wd_wednesday</remote-name>
+            <remote-type>128</remote-type>
+            <local-name>[wd_wednesday]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>wd_wednesday</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARBINARY&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>up</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[up]</local-name>
+            <parent-name>[airasia]</parent-name>
+            <remote-alias>up</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BIT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Askprice' datatype='real' name='[askprice]' role='measure' type='quantitative' />
+      <column caption='Askvolume' datatype='integer' name='[askvolume]' role='measure' type='quantitative' />
+      <column caption='Bidprice' datatype='real' name='[bidprice]' role='measure' type='quantitative' />
+      <column caption='Bidvolume' datatype='integer' name='[bidvolume]' role='measure' type='quantitative' />
+      <column caption='Chg' datatype='real' name='[chg]' role='measure' type='quantitative' />
+      <column caption='Chgpct' datatype='real' name='[chgpct]' role='measure' type='quantitative' />
+      <column caption='Clf Change' datatype='real' name='[clf_change]' role='measure' type='quantitative' />
+      <column caption='Clf Chgpct' datatype='real' name='[clf_chgpct]' role='measure' type='quantitative' />
+      <column caption='Clf Lastprice' datatype='real' name='[clf_lastprice]' role='measure' type='quantitative' />
+      <column caption='Clf Volume' datatype='real' name='[clf_volume]' role='measure' type='quantitative' />
+      <column caption='Dji Change' datatype='real' name='[dji_change]' role='measure' type='quantitative' />
+      <column caption='Dji Chgpct' datatype='real' name='[dji_chgpct]' role='measure' type='quantitative' />
+      <column caption='Dji Chgvolume' datatype='real' name='[dji_chgvolume]' role='measure' type='quantitative' />
+      <column caption='Dji Lastprice' datatype='real' name='[dji_lastprice]' role='measure' type='quantitative' />
+      <column caption='Dt' datatype='date' name='[dt]' role='dimension' type='ordinal' />
+      <column caption='Dy' datatype='real' name='[dy]' role='measure' type='quantitative' />
+      <column caption='Gcf Change' datatype='real' name='[gcf_change]' role='measure' type='quantitative' />
+      <column caption='Gcf Chgpct' datatype='real' name='[gcf_chgpct]' role='measure' type='quantitative' />
+      <column caption='Gcf Lastprice' datatype='real' name='[gcf_lastprice]' role='measure' type='quantitative' />
+      <column caption='Gcf Volume' datatype='real' name='[gcf_volume]' role='measure' type='quantitative' />
+      <column caption='High' datatype='real' name='[high]' role='measure' type='quantitative' />
+      <column caption='Ixic Change' datatype='real' name='[ixic_change]' role='measure' type='quantitative' />
+      <column caption='Ixic Chgpct' datatype='real' name='[ixic_chgpct]' role='measure' type='quantitative' />
+      <column caption='Ixic Chgvolume' datatype='real' name='[ixic_chgvolume]' role='measure' type='quantitative' />
+      <column caption='Ixic Lastprice' datatype='real' name='[ixic_lastprice]' role='measure' type='quantitative' />
+      <column caption='Lastprice' datatype='real' name='[lastprice]' role='measure' type='quantitative' />
+      <column caption='Low' datatype='real' name='[low]' role='measure' type='quantitative' />
+      <column caption='Marketcap' datatype='integer' name='[marketcap]' role='measure' type='quantitative' />
+      <column caption='Myrcny Perunit' datatype='real' name='[myrcny_perunit]' role='measure' type='quantitative' />
+      <column caption='Myrsgd Perunit' datatype='real' name='[myrsgd_perunit]' role='measure' type='quantitative' />
+      <column caption='Myrusd Perunit' datatype='real' name='[myrusd_perunit]' role='measure' type='quantitative' />
+      <column caption='Open' datatype='real' name='[open]' role='measure' type='quantitative' />
+      <column caption='Pe' datatype='real' name='[pe]' role='measure' type='quantitative' />
+      <column caption='Polarity' datatype='real' name='[polarity]' role='measure' type='quantitative' />
+      <column caption='Quote' datatype='string' name='[quote]' role='dimension' type='nominal' />
+      <column caption='Roe' datatype='real' name='[roe]' role='measure' type='quantitative' />
+      <column caption='Sma3' datatype='real' name='[sma3]' role='measure' type='quantitative' />
+      <column caption='Spread' datatype='real' name='[spread]' role='measure' type='quantitative' />
+      <column caption='Up' datatype='boolean' name='[up]' role='dimension' type='nominal' />
+      <column caption='Volume' datatype='integer' name='[volume]' role='measure' type='quantitative' />
+      <column caption='Wd Friday' datatype='string' name='[wd_friday]' role='dimension' type='nominal' />
+      <column caption='Wd Monday' datatype='string' name='[wd_monday]' role='dimension' type='nominal' />
+      <column caption='Wd Thursday' datatype='string' name='[wd_thursday]' role='dimension' type='nominal' />
+      <column caption='Wd Tuesday' datatype='string' name='[wd_tuesday]' role='dimension' type='nominal' />
+      <column caption='Wd Wednesday' datatype='string' name='[wd_wednesday]' role='dimension' type='nominal' />
+      <column caption='Zgf Change' datatype='real' name='[zgf_change]' role='measure' type='quantitative' />
+      <column caption='Zgf Chgpct' datatype='real' name='[zgf_chgpct]' role='measure' type='quantitative' />
+      <column caption='Zgf Lastprice' datatype='real' name='[zgf_lastprice]' role='measure' type='quantitative' />
+      <column caption='Zgf Volume' datatype='real' name='[zgf_volume]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.331361' measure-ordering='alphabetic' measure-percentage='0.668639' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='AirAsia Prediction'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Air Asia Price Movement (Progressive LogReg with 37days Window Size)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='airasia (stocks.airasia) (stocks)' name='federated.0cfv01511tmxue110xj5t1bk7num' />
+            <datasource caption='result_37' name='federated.04lqgua02ofals175x76g10cfsdm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04lqgua02ofals175x76g10cfsdm'>
+            <column-instance column='[result]' derivation='None' name='[none:result:nk]' pivot='key' type='nominal' />
+            <column caption='Result' datatype='string' name='[result]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0cfv01511tmxue110xj5t1bk7num'>
+            <column-instance column='[lastprice]' derivation='Attribute' name='[attr:lastprice:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[up]' derivation='Attribute' name='[attr:up:nk]' pivot='key' type='nominal' />
+            <column caption='Dt' datatype='date' name='[dt]' role='dimension' type='ordinal' />
+            <column caption='Lastprice' datatype='real' name='[lastprice]' role='measure' type='quantitative' />
+            <column-instance column='[dt]' derivation='None' name='[none:dt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lastprice]' derivation='Sum' name='[sum:lastprice:qk]' pivot='key' type='quantitative' />
+            <column caption='Up' datatype='boolean' name='[up]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]' field-type='quantitative' max='3.0' min='2.2999999999999998' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='1' field='[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='cell-w' value='54' />
+            <format attr='cell-h' value='18' />
+            <format attr='cell' value='18' />
+            <format attr='cell-q' value='90' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#fefaf1' />
+            <format attr='fill-below' id='refline0' value='#f9f9f9' />
+            <format attr='stroke-size' id='refline0' value='4' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' value='#aa0000' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-size' value='16' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <tooltip column='[federated.0cfv01511tmxue110xj5t1bk7num].[attr:up:nk]' />
+              <lod column='[federated.0cfv01511tmxue110xj5t1bk7num].[attr:lastprice:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='value' scope='per-pane' value='#2019-04-19#' value-column='[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.84558010101318359' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <tooltip column='[federated.0cfv01511tmxue110xj5t1bk7num].[attr:up:nk]' />
+              <lod column='[federated.0cfv01511tmxue110xj5t1bk7num].[attr:lastprice:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.75762432813644409' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.04lqgua02ofals175x76g10cfsdm].[none:result:nk]' />
+              <text column='[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]' />
+              <tooltip column='[federated.0cfv01511tmxue110xj5t1bk7num].[attr:up:nk]' />
+              <lod column='[federated.0cfv01511tmxue110xj5t1bk7num].[attr:lastprice:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.7911050319671631' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk] + [federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk])</rows>
+        <cols>[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]</cols>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontsize='15'>Test</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2019-04-28 16:21:41.989#'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.4627744878657216'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2019-05-05 08:56:25.171#'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.3520435437393803'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='1' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontsize='15'>Train</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2019-03-18 19:13:33.743#'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.5015303183099409'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2019-03-25 11:48:16.925#'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[none:dt:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.3907993741835996'>
+                  <node-reference>
+                    <axis>[federated.0cfv01511tmxue110xj5t1bk7num].[sum:lastprice:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{0370C441-A887-4D60-BCA4-4A4FCC1BA4E8}' />
+    </worksheet>
+    <worksheet name='Sentiment Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Sentiment Polarit (Predictibility over Price Up/Down)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='airasia (stocks.airasia) (stocks)' name='federated.0cfv01511tmxue110xj5t1bk7num' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cfv01511tmxue110xj5t1bk7num'>
+            <column-instance column='[polarity]' derivation='Avg' name='[avg:polarity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[up]' derivation='None' name='[none:up:nk]' pivot='key' type='nominal' />
+            <column caption='Polarity' datatype='real' name='[polarity]' role='measure' type='quantitative' />
+            <column caption='Up' datatype='boolean' name='[up]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0cfv01511tmxue110xj5t1bk7num].[none:up:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0cfv01511tmxue110xj5t1bk7num].[avg:polarity:qk]</rows>
+        <cols>[federated.0cfv01511tmxue110xj5t1bk7num].[none:up:nk]</cols>
+      </table>
+      <simple-id uuid='{8CEBC062-B098-4AEC-B413-F308118A00B9}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='89'>
+    <window class='worksheet' name='AirAsia Prediction'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.04lqgua02ofals175x76g10cfsdm].[none:result:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04lqgua02ofals175x76g10cfsdm].[none:result:nk]</field>
+            <field>[federated.0btpllb09t36xk1393itk1c200is].[none:up:nk]</field>
+            <field>[federated.0btpllb09t36xk1393itk1c200is].[yr:dt:ok]</field>
+            <field>[federated.0cfv01511tmxue110xj5t1bk7num].[none:up:nk]</field>
+            <field>[federated.0cfv01511tmxue110xj5t1bk7num].[yr:dt:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FEBC3E94-6301-4742-8C6D-8CCC2E92A052}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sentiment Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0cfv01511tmxue110xj5t1bk7num].[none:up:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0cfv01511tmxue110xj5t1bk7num].[none:up:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{08DD4FCE-A1E0-4592-8A04-87DF9AEA112F}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='AirAsia Prediction' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sentiment Analysis' width='192'>
+      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
+      I4pWAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,2161 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0213.2333                               -->
+<workbook original-version='18.1' source-build='2019.1.0 (20191.19.0213.2333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='clean_data (2)' inline='true' name='federated.0luxl9i085b8gh11b79cg1q1hv0n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='clean_data_sentiment' name='textscan.05gzd130zcaabb1bj3u801hk3v8s'>
+            <connection class='textscan' directory='D:/OneDrive - 365.um.edu.my/Master Data Science/WQD 7005 - Data Mining/Assignment/github-stocks118/data' filename='clean_data_sentiment.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.148148' measure-ordering='alphabetic' measure-percentage='0.851852' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='clean_data' inline='true' name='federated.0ks5lef0js6cvp1fq2mbe0pq7czz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='clean_data_sentiment' name='textscan.0f2x4p50f57rp31ashwbw01foghv'>
+            <connection class='textscan' directory='D:/OneDrive - 365.um.edu.my/Master Data Science/WQD 7005 - Data Mining/Assignment/github-stocks118/data' filename='clean_data_sentiment.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='clean_data_sentiment_2' name='textscan.0hkqar717t0qdp15a12ep083ot0o'>
+            <connection class='textscan' directory='D:/OneDrive - 365.um.edu.my/Master Data Science/WQD 7005 - Data Mining/Assignment/github-stocks118/data' filename='clean_data_sentiment_2.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='1' />
+              <expression op='1' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0f2x4p50f57rp31ashwbw01foghv' name='clean_data_sentiment.csv' table='[clean_data_sentiment#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='DT' ordinal='0' />
+              <column datatype='string' name='Quote' ordinal='1' />
+              <column datatype='real' name='MarketCap' ordinal='2' />
+              <column datatype='real' name='LastPrice' ordinal='3' />
+              <column datatype='real' name='PE' ordinal='4' />
+              <column datatype='real' name='DY' ordinal='5' />
+              <column datatype='real' name='ROE' ordinal='6' />
+              <column datatype='real' name='Open' ordinal='7' />
+              <column datatype='real' name='Low' ordinal='8' />
+              <column datatype='real' name='High' ordinal='9' />
+              <column datatype='real' name='Chg' ordinal='10' />
+              <column datatype='real' name='ChgPct' ordinal='11' />
+              <column datatype='integer' name='Volume' ordinal='12' />
+              <column datatype='real' name='BidPrice' ordinal='13' />
+              <column datatype='integer' name='BidVolume' ordinal='14' />
+              <column datatype='real' name='AskPrice' ordinal='15' />
+              <column datatype='integer' name='AskVolume' ordinal='16' />
+              <column datatype='real' name='MYRCNY_PerUnit' ordinal='17' />
+              <column datatype='real' name='MYRSGD_PerUnit' ordinal='18' />
+              <column datatype='real' name='MYRUSD_PerUnit' ordinal='19' />
+              <column datatype='real' name='DJI_LastPrice' ordinal='20' />
+              <column datatype='real' name='IXIC_LastPrice' ordinal='21' />
+              <column datatype='real' name='DJI_Change' ordinal='22' />
+              <column datatype='real' name='IXIC_Change' ordinal='23' />
+              <column datatype='real' name='DJI_ChgPct' ordinal='24' />
+              <column datatype='real' name='IXIC_ChgPct' ordinal='25' />
+              <column datatype='real' name='DJI_ChgVolume' ordinal='26' />
+              <column datatype='real' name='IXIC_ChgVolume' ordinal='27' />
+              <column datatype='real' name='CLF_LastPrice' ordinal='28' />
+              <column datatype='real' name='GCF_LastPrice' ordinal='29' />
+              <column datatype='real' name='ZGF_LastPrice' ordinal='30' />
+              <column datatype='real' name='CLF_Change' ordinal='31' />
+              <column datatype='real' name='GCF_Change' ordinal='32' />
+              <column datatype='real' name='ZGF_Change' ordinal='33' />
+              <column datatype='real' name='CLF_ChgPct' ordinal='34' />
+              <column datatype='real' name='GCF_ChgPct' ordinal='35' />
+              <column datatype='real' name='ZGF_ChgPct' ordinal='36' />
+              <column datatype='real' name='CLF_Volume' ordinal='37' />
+              <column datatype='real' name='GCF_Volume' ordinal='38' />
+              <column datatype='real' name='ZGF_Volume' ordinal='39' />
+              <column datatype='real' name='Polarity' ordinal='40' />
+              <column datatype='real' name='Spread' ordinal='41' />
+              <column datatype='real' name='SMA3' ordinal='42' />
+              <column datatype='integer' name='WD_Friday' ordinal='43' />
+              <column datatype='integer' name='WD_Monday' ordinal='44' />
+              <column datatype='integer' name='WD_Thursday' ordinal='45' />
+              <column datatype='integer' name='WD_Tuesday' ordinal='46' />
+              <column datatype='integer' name='WD_Wednesday' ordinal='47' />
+              <column datatype='boolean' name='UP' ordinal='48' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0hkqar717t0qdp15a12ep083ot0o' name='clean_data_sentiment_2.csv' table='[clean_data_sentiment_2#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='DT' ordinal='0' />
+              <column datatype='string' name='Quote' ordinal='1' />
+              <column datatype='real' name='MarketCap' ordinal='2' />
+              <column datatype='real' name='LastPrice' ordinal='3' />
+              <column datatype='real' name='PE' ordinal='4' />
+              <column datatype='real' name='DY' ordinal='5' />
+              <column datatype='real' name='ROE' ordinal='6' />
+              <column datatype='real' name='Open' ordinal='7' />
+              <column datatype='real' name='Low' ordinal='8' />
+              <column datatype='real' name='High' ordinal='9' />
+              <column datatype='real' name='Chg' ordinal='10' />
+              <column datatype='real' name='ChgPct' ordinal='11' />
+              <column datatype='integer' name='Volume' ordinal='12' />
+              <column datatype='real' name='BidPrice' ordinal='13' />
+              <column datatype='integer' name='BidVolume' ordinal='14' />
+              <column datatype='real' name='AskPrice' ordinal='15' />
+              <column datatype='integer' name='AskVolume' ordinal='16' />
+              <column datatype='real' name='MYRCNY_PerUnit' ordinal='17' />
+              <column datatype='real' name='MYRSGD_PerUnit' ordinal='18' />
+              <column datatype='real' name='MYRUSD_PerUnit' ordinal='19' />
+              <column datatype='real' name='DJI_LastPrice' ordinal='20' />
+              <column datatype='real' name='IXIC_LastPrice' ordinal='21' />
+              <column datatype='real' name='DJI_Change' ordinal='22' />
+              <column datatype='real' name='IXIC_Change' ordinal='23' />
+              <column datatype='real' name='DJI_ChgPct' ordinal='24' />
+              <column datatype='real' name='IXIC_ChgPct' ordinal='25' />
+              <column datatype='real' name='DJI_ChgVolume' ordinal='26' />
+              <column datatype='real' name='IXIC_ChgVolume' ordinal='27' />
+              <column datatype='real' name='CLF_LastPrice' ordinal='28' />
+              <column datatype='real' name='GCF_LastPrice' ordinal='29' />
+              <column datatype='real' name='ZGF_LastPrice' ordinal='30' />
+              <column datatype='real' name='CLF_Change' ordinal='31' />
+              <column datatype='real' name='GCF_Change' ordinal='32' />
+              <column datatype='real' name='ZGF_Change' ordinal='33' />
+              <column datatype='real' name='CLF_ChgPct' ordinal='34' />
+              <column datatype='real' name='GCF_ChgPct' ordinal='35' />
+              <column datatype='real' name='ZGF_ChgPct' ordinal='36' />
+              <column datatype='real' name='CLF_Volume' ordinal='37' />
+              <column datatype='real' name='GCF_Volume' ordinal='38' />
+              <column datatype='real' name='ZGF_Volume' ordinal='39' />
+              <column datatype='real' name='Polarity' ordinal='40' />
+              <column datatype='real' name='Spread' ordinal='41' />
+              <column datatype='real' name='SMA3' ordinal='42' />
+              <column datatype='integer' name='WD_Friday' ordinal='43' />
+              <column datatype='integer' name='WD_Monday' ordinal='44' />
+              <column datatype='integer' name='WD_Thursday' ordinal='45' />
+              <column datatype='integer' name='WD_Tuesday' ordinal='46' />
+              <column datatype='integer' name='WD_Wednesday' ordinal='47' />
+              <column datatype='boolean' name='UP' ordinal='48' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[AskPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[AskPrice]' />
+          <map key='[AskPrice]' value='[clean_data_sentiment.csv].[AskPrice]' />
+          <map key='[AskVolume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[AskVolume]' />
+          <map key='[AskVolume]' value='[clean_data_sentiment.csv].[AskVolume]' />
+          <map key='[BidPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[BidPrice]' />
+          <map key='[BidPrice]' value='[clean_data_sentiment.csv].[BidPrice]' />
+          <map key='[BidVolume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[BidVolume]' />
+          <map key='[BidVolume]' value='[clean_data_sentiment.csv].[BidVolume]' />
+          <map key='[CLF_Change (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[CLF_Change]' />
+          <map key='[CLF_Change]' value='[clean_data_sentiment.csv].[CLF_Change]' />
+          <map key='[CLF_ChgPct (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[CLF_ChgPct]' />
+          <map key='[CLF_ChgPct]' value='[clean_data_sentiment.csv].[CLF_ChgPct]' />
+          <map key='[CLF_LastPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[CLF_LastPrice]' />
+          <map key='[CLF_LastPrice]' value='[clean_data_sentiment.csv].[CLF_LastPrice]' />
+          <map key='[CLF_Volume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[CLF_Volume]' />
+          <map key='[CLF_Volume]' value='[clean_data_sentiment.csv].[CLF_Volume]' />
+          <map key='[Chg (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Chg]' />
+          <map key='[ChgPct (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[ChgPct]' />
+          <map key='[ChgPct]' value='[clean_data_sentiment.csv].[ChgPct]' />
+          <map key='[Chg]' value='[clean_data_sentiment.csv].[Chg]' />
+          <map key='[DJI_Change (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[DJI_Change]' />
+          <map key='[DJI_Change]' value='[clean_data_sentiment.csv].[DJI_Change]' />
+          <map key='[DJI_ChgPct (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[DJI_ChgPct]' />
+          <map key='[DJI_ChgPct]' value='[clean_data_sentiment.csv].[DJI_ChgPct]' />
+          <map key='[DJI_ChgVolume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[DJI_ChgVolume]' />
+          <map key='[DJI_ChgVolume]' value='[clean_data_sentiment.csv].[DJI_ChgVolume]' />
+          <map key='[DJI_LastPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[DJI_LastPrice]' />
+          <map key='[DJI_LastPrice]' value='[clean_data_sentiment.csv].[DJI_LastPrice]' />
+          <map key='[DT (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[DT]' />
+          <map key='[DT]' value='[clean_data_sentiment.csv].[DT]' />
+          <map key='[DY (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[DY]' />
+          <map key='[DY]' value='[clean_data_sentiment.csv].[DY]' />
+          <map key='[GCF_Change (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[GCF_Change]' />
+          <map key='[GCF_Change]' value='[clean_data_sentiment.csv].[GCF_Change]' />
+          <map key='[GCF_ChgPct (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[GCF_ChgPct]' />
+          <map key='[GCF_ChgPct]' value='[clean_data_sentiment.csv].[GCF_ChgPct]' />
+          <map key='[GCF_LastPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[GCF_LastPrice]' />
+          <map key='[GCF_LastPrice]' value='[clean_data_sentiment.csv].[GCF_LastPrice]' />
+          <map key='[GCF_Volume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[GCF_Volume]' />
+          <map key='[GCF_Volume]' value='[clean_data_sentiment.csv].[GCF_Volume]' />
+          <map key='[High (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[High]' />
+          <map key='[High]' value='[clean_data_sentiment.csv].[High]' />
+          <map key='[IXIC_Change (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[IXIC_Change]' />
+          <map key='[IXIC_Change]' value='[clean_data_sentiment.csv].[IXIC_Change]' />
+          <map key='[IXIC_ChgPct (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[IXIC_ChgPct]' />
+          <map key='[IXIC_ChgPct]' value='[clean_data_sentiment.csv].[IXIC_ChgPct]' />
+          <map key='[IXIC_ChgVolume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[IXIC_ChgVolume]' />
+          <map key='[IXIC_ChgVolume]' value='[clean_data_sentiment.csv].[IXIC_ChgVolume]' />
+          <map key='[IXIC_LastPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[IXIC_LastPrice]' />
+          <map key='[IXIC_LastPrice]' value='[clean_data_sentiment.csv].[IXIC_LastPrice]' />
+          <map key='[LastPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[LastPrice]' />
+          <map key='[LastPrice]' value='[clean_data_sentiment.csv].[LastPrice]' />
+          <map key='[Low (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Low]' />
+          <map key='[Low]' value='[clean_data_sentiment.csv].[Low]' />
+          <map key='[MYRCNY_PerUnit (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[MYRCNY_PerUnit]' />
+          <map key='[MYRCNY_PerUnit]' value='[clean_data_sentiment.csv].[MYRCNY_PerUnit]' />
+          <map key='[MYRSGD_PerUnit (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[MYRSGD_PerUnit]' />
+          <map key='[MYRSGD_PerUnit]' value='[clean_data_sentiment.csv].[MYRSGD_PerUnit]' />
+          <map key='[MYRUSD_PerUnit (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[MYRUSD_PerUnit]' />
+          <map key='[MYRUSD_PerUnit]' value='[clean_data_sentiment.csv].[MYRUSD_PerUnit]' />
+          <map key='[MarketCap (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[MarketCap]' />
+          <map key='[MarketCap]' value='[clean_data_sentiment.csv].[MarketCap]' />
+          <map key='[Open (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Open]' />
+          <map key='[Open]' value='[clean_data_sentiment.csv].[Open]' />
+          <map key='[PE (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[PE]' />
+          <map key='[PE]' value='[clean_data_sentiment.csv].[PE]' />
+          <map key='[Polarity (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Polarity]' />
+          <map key='[Polarity]' value='[clean_data_sentiment.csv].[Polarity]' />
+          <map key='[Quote (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Quote]' />
+          <map key='[Quote]' value='[clean_data_sentiment.csv].[Quote]' />
+          <map key='[ROE (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[ROE]' />
+          <map key='[ROE]' value='[clean_data_sentiment.csv].[ROE]' />
+          <map key='[SMA3 (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[SMA3]' />
+          <map key='[SMA3]' value='[clean_data_sentiment.csv].[SMA3]' />
+          <map key='[Spread (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Spread]' />
+          <map key='[Spread]' value='[clean_data_sentiment.csv].[Spread]' />
+          <map key='[UP (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[UP]' />
+          <map key='[UP]' value='[clean_data_sentiment.csv].[UP]' />
+          <map key='[Volume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[Volume]' />
+          <map key='[Volume]' value='[clean_data_sentiment.csv].[Volume]' />
+          <map key='[WD_Friday (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[WD_Friday]' />
+          <map key='[WD_Friday]' value='[clean_data_sentiment.csv].[WD_Friday]' />
+          <map key='[WD_Monday (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[WD_Monday]' />
+          <map key='[WD_Monday]' value='[clean_data_sentiment.csv].[WD_Monday]' />
+          <map key='[WD_Thursday (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[WD_Thursday]' />
+          <map key='[WD_Thursday]' value='[clean_data_sentiment.csv].[WD_Thursday]' />
+          <map key='[WD_Tuesday (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[WD_Tuesday]' />
+          <map key='[WD_Tuesday]' value='[clean_data_sentiment.csv].[WD_Tuesday]' />
+          <map key='[WD_Wednesday (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[WD_Wednesday]' />
+          <map key='[WD_Wednesday]' value='[clean_data_sentiment.csv].[WD_Wednesday]' />
+          <map key='[ZGF_Change (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[ZGF_Change]' />
+          <map key='[ZGF_Change]' value='[clean_data_sentiment.csv].[ZGF_Change]' />
+          <map key='[ZGF_ChgPct (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[ZGF_ChgPct]' />
+          <map key='[ZGF_ChgPct]' value='[clean_data_sentiment.csv].[ZGF_ChgPct]' />
+          <map key='[ZGF_LastPrice (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[ZGF_LastPrice]' />
+          <map key='[ZGF_LastPrice]' value='[clean_data_sentiment.csv].[ZGF_LastPrice]' />
+          <map key='[ZGF_Volume (clean_data_sentiment_2.csv)]' value='[clean_data_sentiment_2.csv].[ZGF_Volume]' />
+          <map key='[ZGF_Volume]' value='[clean_data_sentiment.csv].[ZGF_Volume]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DT</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[DT]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>DT</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quote</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Quote]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Quote</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MarketCap</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MarketCap]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>MarketCap</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LastPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>LastPrice</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PE]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>PE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DY</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DY]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>DY</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ROE]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>ROE</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Chg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Chg]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Chg</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ChgPct]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>ChgPct</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BidPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BidPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>BidPrice</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BidVolume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BidVolume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>BidVolume</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AskPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AskPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>AskPrice</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AskVolume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AskVolume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>AskVolume</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MYRCNY_PerUnit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MYRCNY_PerUnit]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>MYRCNY_PerUnit</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MYRSGD_PerUnit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MYRSGD_PerUnit]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>MYRSGD_PerUnit</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MYRUSD_PerUnit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MYRUSD_PerUnit]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>MYRUSD_PerUnit</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_LastPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>DJI_LastPrice</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_LastPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>IXIC_LastPrice</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_Change]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>DJI_Change</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_Change]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>IXIC_Change</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_ChgPct]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>DJI_ChgPct</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_ChgPct]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>IXIC_ChgPct</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_ChgVolume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_ChgVolume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>DJI_ChgVolume</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_ChgVolume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_ChgVolume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>IXIC_ChgVolume</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_LastPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>CLF_LastPrice</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_LastPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>GCF_LastPrice</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_LastPrice]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>ZGF_LastPrice</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_Change]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>CLF_Change</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_Change]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>GCF_Change</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_Change]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>ZGF_Change</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_ChgPct]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>CLF_ChgPct</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_ChgPct]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>GCF_ChgPct</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_ChgPct]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>ZGF_ChgPct</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_Volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_Volume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>CLF_Volume</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_Volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_Volume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>GCF_Volume</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_Volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_Volume]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>ZGF_Volume</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Polarity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Polarity]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Polarity</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Spread</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Spread]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>Spread</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SMA3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SMA3]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>SMA3</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Friday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Friday]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>WD_Friday</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Monday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Monday]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>WD_Monday</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Thursday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Thursday]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>WD_Thursday</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Tuesday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Tuesday]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>WD_Tuesday</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Wednesday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Wednesday]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>WD_Wednesday</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UP</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[UP]</local-name>
+            <parent-name>[clean_data_sentiment.csv]</parent-name>
+            <remote-alias>UP</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DT</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[DT (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>DT</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quote</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Quote (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Quote</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MarketCap</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MarketCap (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>MarketCap</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LastPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>LastPrice</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PE (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>PE</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DY</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DY (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>DY</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ROE (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>ROE</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Chg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Chg (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Chg</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ChgPct (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>ChgPct</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BidPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BidPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>BidPrice</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BidVolume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BidVolume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>BidVolume</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AskPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AskPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>AskPrice</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AskVolume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AskVolume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>AskVolume</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MYRCNY_PerUnit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MYRCNY_PerUnit (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>MYRCNY_PerUnit</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MYRSGD_PerUnit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MYRSGD_PerUnit (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>MYRSGD_PerUnit</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MYRUSD_PerUnit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MYRUSD_PerUnit (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>MYRUSD_PerUnit</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_LastPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>DJI_LastPrice</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_LastPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>IXIC_LastPrice</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_Change (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>DJI_Change</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_Change (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>IXIC_Change</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_ChgPct (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>DJI_ChgPct</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_ChgPct (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>IXIC_ChgPct</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DJI_ChgVolume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DJI_ChgVolume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>DJI_ChgVolume</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IXIC_ChgVolume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IXIC_ChgVolume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>IXIC_ChgVolume</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_LastPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>CLF_LastPrice</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_LastPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>GCF_LastPrice</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_LastPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_LastPrice (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>ZGF_LastPrice</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_Change (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>CLF_Change</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_Change (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>GCF_Change</remote-alias>
+            <ordinal>81</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_Change</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_Change (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>ZGF_Change</remote-alias>
+            <ordinal>82</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_ChgPct (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>CLF_ChgPct</remote-alias>
+            <ordinal>83</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_ChgPct (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>GCF_ChgPct</remote-alias>
+            <ordinal>84</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_ChgPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_ChgPct (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>ZGF_ChgPct</remote-alias>
+            <ordinal>85</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CLF_Volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CLF_Volume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>CLF_Volume</remote-alias>
+            <ordinal>86</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GCF_Volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GCF_Volume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>GCF_Volume</remote-alias>
+            <ordinal>87</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZGF_Volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ZGF_Volume (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>ZGF_Volume</remote-alias>
+            <ordinal>88</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Polarity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Polarity (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Polarity</remote-alias>
+            <ordinal>89</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Spread</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Spread (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>Spread</remote-alias>
+            <ordinal>90</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SMA3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SMA3 (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>SMA3</remote-alias>
+            <ordinal>91</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Friday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Friday (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>WD_Friday</remote-alias>
+            <ordinal>92</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Monday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Monday (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>WD_Monday</remote-alias>
+            <ordinal>93</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Thursday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Thursday (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>WD_Thursday</remote-alias>
+            <ordinal>94</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Tuesday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Tuesday (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>WD_Tuesday</remote-alias>
+            <ordinal>95</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WD_Wednesday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WD_Wednesday (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>WD_Wednesday</remote-alias>
+            <ordinal>96</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UP</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[UP (clean_data_sentiment_2.csv)]</local-name>
+            <parent-name>[clean_data_sentiment_2.csv]</parent-name>
+            <remote-alias>UP</remote-alias>
+            <ordinal>97</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='AskPrice (clean data sentiment 2.csv)' datatype='real' name='[AskPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Ask Price' datatype='real' name='[AskPrice]' role='measure' type='quantitative' />
+      <column caption='AskVolume (clean data sentiment 2.csv)' datatype='integer' name='[AskVolume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Ask Volume' datatype='integer' name='[AskVolume]' role='measure' type='quantitative' />
+      <column caption='BidPrice (clean data sentiment 2.csv)' datatype='real' name='[BidPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Bid Price' datatype='real' name='[BidPrice]' role='measure' type='quantitative' />
+      <column caption='BidVolume (clean data sentiment 2.csv)' datatype='integer' name='[BidVolume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Bid Volume' datatype='integer' name='[BidVolume]' role='measure' type='quantitative' />
+      <column caption='CLF Change (clean data sentiment 2.csv)' datatype='real' name='[CLF_Change (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='CLF Change' datatype='real' name='[CLF_Change]' role='measure' type='quantitative' />
+      <column caption='CLF ChgPct (clean data sentiment 2.csv)' datatype='real' name='[CLF_ChgPct (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='CLF ChgPct' datatype='real' name='[CLF_ChgPct]' role='measure' type='quantitative' />
+      <column caption='CLF LastPrice (clean data sentiment 2.csv)' datatype='real' name='[CLF_LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='CLF LastPrice' datatype='real' name='[CLF_LastPrice]' role='measure' type='quantitative' />
+      <column caption='CLF Volume (clean data sentiment 2.csv)' datatype='real' name='[CLF_Volume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='CLF Volume' datatype='real' name='[CLF_Volume]' role='measure' type='quantitative' />
+      <column caption='CORR_LastPrice' datatype='real' name='[Calculation_359443603219959810]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CORR( [LastPrice (clean_data_sentiment_2.csv)], [LastPrice])' />
+      </column>
+      <column caption='Chg (clean data sentiment 2.csv)' datatype='real' name='[Chg (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='ChgPct (clean data sentiment 2.csv)' datatype='real' name='[ChgPct (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Chg Pct' datatype='real' name='[ChgPct]' role='measure' type='quantitative' />
+      <column caption='DJI Change (clean data sentiment 2.csv)' datatype='real' name='[DJI_Change (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='DJI Change' datatype='real' name='[DJI_Change]' role='measure' type='quantitative' />
+      <column caption='DJI ChgPct (clean data sentiment 2.csv)' datatype='real' name='[DJI_ChgPct (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='DJI ChgPct' datatype='real' name='[DJI_ChgPct]' role='measure' type='quantitative' />
+      <column caption='DJI ChgVolume (clean data sentiment 2.csv)' datatype='real' name='[DJI_ChgVolume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='DJI ChgVolume' datatype='real' name='[DJI_ChgVolume]' role='measure' type='quantitative' />
+      <column caption='DJI LastPrice (clean data sentiment 2.csv)' datatype='real' name='[DJI_LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='DJI LastPrice' datatype='real' name='[DJI_LastPrice]' role='measure' type='quantitative' />
+      <column caption='DT (clean data sentiment 2.csv)' datatype='date' name='[DT (clean_data_sentiment_2.csv)]' role='dimension' type='ordinal' />
+      <column caption='DY (clean data sentiment 2.csv)' datatype='real' name='[DY (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='GCF Change (clean data sentiment 2.csv)' datatype='real' name='[GCF_Change (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='GCF Change' datatype='real' name='[GCF_Change]' role='measure' type='quantitative' />
+      <column caption='GCF ChgPct (clean data sentiment 2.csv)' datatype='real' name='[GCF_ChgPct (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='GCF ChgPct' datatype='real' name='[GCF_ChgPct]' role='measure' type='quantitative' />
+      <column caption='GCF LastPrice (clean data sentiment 2.csv)' datatype='real' name='[GCF_LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='GCF LastPrice' datatype='real' name='[GCF_LastPrice]' role='measure' type='quantitative' />
+      <column caption='GCF Volume (clean data sentiment 2.csv)' datatype='real' name='[GCF_Volume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='GCF Volume' datatype='real' name='[GCF_Volume]' role='measure' type='quantitative' />
+      <column caption='High (clean data sentiment 2.csv)' datatype='real' name='[High (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='IXIC Change (clean data sentiment 2.csv)' datatype='real' name='[IXIC_Change (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='IXIC Change' datatype='real' name='[IXIC_Change]' role='measure' type='quantitative' />
+      <column caption='IXIC ChgPct (clean data sentiment 2.csv)' datatype='real' name='[IXIC_ChgPct (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='IXIC ChgPct' datatype='real' name='[IXIC_ChgPct]' role='measure' type='quantitative' />
+      <column caption='IXIC ChgVolume (clean data sentiment 2.csv)' datatype='real' name='[IXIC_ChgVolume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='IXIC ChgVolume' datatype='real' name='[IXIC_ChgVolume]' role='measure' type='quantitative' />
+      <column caption='IXIC LastPrice (clean data sentiment 2.csv)' datatype='real' name='[IXIC_LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='IXIC LastPrice' datatype='real' name='[IXIC_LastPrice]' role='measure' type='quantitative' />
+      <column caption='LastPrice (clean data sentiment 2.csv)' datatype='real' name='[LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Last Price' datatype='real' name='[LastPrice]' role='measure' type='quantitative' />
+      <column caption='Low (clean data sentiment 2.csv)' datatype='real' name='[Low (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='MYRCNY PerUnit (clean data sentiment 2.csv)' datatype='real' name='[MYRCNY_PerUnit (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='MYRCNY PerUnit' datatype='real' name='[MYRCNY_PerUnit]' role='measure' type='quantitative' />
+      <column caption='MYRSGD PerUnit (clean data sentiment 2.csv)' datatype='real' name='[MYRSGD_PerUnit (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='MYRSGD PerUnit' datatype='real' name='[MYRSGD_PerUnit]' role='measure' type='quantitative' />
+      <column caption='MYRUSD PerUnit (clean data sentiment 2.csv)' datatype='real' name='[MYRUSD_PerUnit (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='MYRUSD PerUnit' datatype='real' name='[MYRUSD_PerUnit]' role='measure' type='quantitative' />
+      <column caption='MarketCap (clean data sentiment 2.csv)' datatype='real' name='[MarketCap (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Market Cap' datatype='real' name='[MarketCap]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Open (clean data sentiment 2.csv)' datatype='real' name='[Open (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='PE (clean data sentiment 2.csv)' datatype='real' name='[PE (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Polarity (clean data sentiment 2.csv)' datatype='real' name='[Polarity (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Quote (clean data sentiment 2.csv)' datatype='string' name='[Quote (clean_data_sentiment_2.csv)]' role='dimension' type='nominal' />
+      <column caption='Quote1' datatype='string' name='[Quote]' role='dimension' type='nominal' />
+      <column caption='ROE (clean data sentiment 2.csv)' datatype='real' name='[ROE (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='SMA3 (clean data sentiment 2.csv)' datatype='real' name='[SMA3 (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Sma3' datatype='real' name='[SMA3]' role='measure' type='quantitative' />
+      <column caption='Spread (clean data sentiment 2.csv)' datatype='real' name='[Spread (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='UP (clean data sentiment 2.csv)' datatype='boolean' name='[UP (clean_data_sentiment_2.csv)]' role='dimension' type='nominal' />
+      <column caption='UP1' datatype='boolean' name='[UP]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='Down' />
+          <alias key='true' value='UP' />
+        </aliases>
+      </column>
+      <column caption='Volume (clean data sentiment 2.csv)' datatype='integer' name='[Volume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='WD Friday (clean data sentiment 2.csv)' datatype='integer' name='[WD_Friday (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='WD Friday' datatype='integer' name='[WD_Friday]' role='measure' type='quantitative' />
+      <column caption='WD Monday (clean data sentiment 2.csv)' datatype='integer' name='[WD_Monday (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='WD Monday' datatype='integer' name='[WD_Monday]' role='measure' type='quantitative' />
+      <column caption='WD Thursday (clean data sentiment 2.csv)' datatype='integer' name='[WD_Thursday (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='WD Thursday' datatype='integer' name='[WD_Thursday]' role='measure' type='quantitative' />
+      <column caption='WD Tuesday (clean data sentiment 2.csv)' datatype='integer' name='[WD_Tuesday (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='WD Tuesday' datatype='integer' name='[WD_Tuesday]' role='measure' type='quantitative' />
+      <column caption='WD Wednesday (clean data sentiment 2.csv)' datatype='integer' name='[WD_Wednesday (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='WD Wednesday' datatype='integer' name='[WD_Wednesday]' role='measure' type='quantitative' />
+      <column caption='ZGF Change (clean data sentiment 2.csv)' datatype='real' name='[ZGF_Change (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='ZGF Change' datatype='real' name='[ZGF_Change]' role='measure' type='quantitative' />
+      <column caption='ZGF ChgPct (clean data sentiment 2.csv)' datatype='real' name='[ZGF_ChgPct (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='ZGF ChgPct' datatype='real' name='[ZGF_ChgPct]' role='measure' type='quantitative' />
+      <column caption='ZGF LastPrice (clean data sentiment 2.csv)' datatype='real' name='[ZGF_LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='ZGF LastPrice' datatype='real' name='[ZGF_LastPrice]' role='measure' type='quantitative' />
+      <column caption='ZGF Volume (clean data sentiment 2.csv)' datatype='real' name='[ZGF_Volume (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+      <column caption='ZGF Volume' datatype='real' name='[ZGF_Volume]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.333333' measure-ordering='alphabetic' measure-percentage='0.666667' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='LastPrice Correlation'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='20'>Last Price Correlation</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='clean_data' name='federated.0ks5lef0js6cvp1fq2mbe0pq7czz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ks5lef0js6cvp1fq2mbe0pq7czz'>
+            <column caption='CORR_LastPrice' datatype='real' name='[Calculation_359443603219959810]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CORR( [LastPrice (clean_data_sentiment_2.csv)], [LastPrice])' />
+            </column>
+            <column caption='LastPrice (clean data sentiment 2.csv)' datatype='real' name='[LastPrice (clean_data_sentiment_2.csv)]' role='measure' type='quantitative' />
+            <column caption='Last Price' datatype='real' name='[LastPrice]' role='measure' type='quantitative' />
+            <column caption='Quote (clean data sentiment 2.csv)' datatype='string' name='[Quote (clean_data_sentiment_2.csv)]' role='dimension' type='nominal' />
+            <column caption='Quote1' datatype='string' name='[Quote]' role='dimension' type='nominal' />
+            <column-instance column='[Quote (clean_data_sentiment_2.csv)]' derivation='None' name='[none:Quote (clean_data_sentiment_2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Quote]' derivation='None' name='[none:Quote:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_359443603219959810]' derivation='User' name='[usr:Calculation_359443603219959810:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote (clean_data_sentiment_2.csv):nk]' value='44' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote (clean_data_sentiment_2.csv):nk]' value='18' />
+            <format attr='color' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote (clean_data_sentiment_2.csv):nk]' value='#f28e2b' />
+            <format attr='font-weight' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote (clean_data_sentiment_2.csv):nk]' value='bold' />
+            <format attr='font-size' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='18' />
+            <format attr='color' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='#f28e2b' />
+            <format attr='font-weight' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[usr:Calculation_359443603219959810:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]</rows>
+        <cols>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote (clean_data_sentiment_2.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{82FEEDB0-FCD4-4473-BD77-99D301D34DDF}' />
+    </worksheet>
+    <worksheet name='Sentimet Score'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Sentiment Strength on Stock UP/Down</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='clean_data' name='federated.0ks5lef0js6cvp1fq2mbe0pq7czz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ks5lef0js6cvp1fq2mbe0pq7czz'>
+            <column datatype='real' name='[Polarity]' role='measure' type='quantitative' />
+            <column caption='Quote1' datatype='string' name='[Quote]' role='dimension' type='nominal' />
+            <column caption='UP1' datatype='boolean' name='[UP]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='false' value='Down' />
+                <alias key='true' value='UP' />
+              </aliases>
+            </column>
+            <column-instance column='[Polarity]' derivation='Avg' name='[avg:Polarity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quote]' derivation='None' name='[none:Quote:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UP]' derivation='None' name='[none:UP:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='44' />
+            <format attr='background-color' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='#333333' />
+            <format attr='height-header' value='48' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-size' value='18' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#e15759' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='15' />
+            <format attr='color' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk]' value='14' />
+            <format attr='font-weight' field='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk]' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[avg:Polarity:qk]</rows>
+        <cols>([federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk] / [federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk])</cols>
+      </table>
+      <simple-id uuid='{6E235387-0F59-4976-935E-9EA607CE0C77}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' name='Sentimet Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk]' type='highlighter' />
+            <card pane-specification-id='0' param='[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]</field>
+            <field>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:UP:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{01757E1A-24C9-492B-80F3-69F8CA166621}' />
+    </window>
+    <window class='worksheet' maximized='true' name='LastPrice Correlation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote (clean_data_sentiment_2.csv):nk]</field>
+            <field>[federated.0ks5lef0js6cvp1fq2mbe0pq7czz].[none:Quote:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CAFF0D46-8D6C-4D5A-BCCE-FE074EADBA49}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='LastPrice Correlation' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sentimet Score' width='192'>
+      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
+      /9yZ8jKNnZN2AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
